@@ -8,7 +8,7 @@ defmodule Ratify.Ecto.Plug.SetUser do
     user_id = get_session(conn, :user_id)
 
     cond do
-      user = user_id && Ratify.config(:user_repo).get(Ratify.config(:user_struct), user_id) ->
+      user = user_id && Ratify.Ecto.Plug.config(:user_repo).get(Ratify.Ecto.Plug.config(:user_struct), user_id) ->
         assign(conn, :user, user)
       true ->
         assign(conn, :user, nil)
