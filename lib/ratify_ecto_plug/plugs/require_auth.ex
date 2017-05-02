@@ -8,7 +8,9 @@ defmodule Ratify.Ecto.Plug.RequireAuth do
     case conn.assigns[:user] do
       nil ->
         {module, function} = Map.get(params, :handler)
-        apply(module, function, [conn])
+        transform = Map.get(params, :transform)
+
+        apply(module, function, [conn, transform])
       _ -> conn
     end
   end
@@ -18,6 +20,6 @@ defmodule Ratify.Ecto.Plug.RequireAuth do
   end
 
   defp build_handler_tuple(_) do
-    {Ratify.Handlers.AuthHandler, :handle_unauthenticated}
+    {Ratify.Ecto.Plug.AuthHandler, :handle_unauthenticated}
   end
 end
