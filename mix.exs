@@ -32,7 +32,7 @@ defmodule Ratify.Ecto.Plug.Mixfile do
   defp deps do
     [
       {:ecto, "~> 2.1"},
-      {:plug, "~> 1.4"},
+      {:plug, "~> 1.3.2"},
     ]
   end
 end
