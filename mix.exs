@@ -31,7 +31,7 @@ defmodule Ratify.Ecto.Plug.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:ecto, "~> 2.1"}
+      {:ecto, "~> 2.1"},
       {:plug, "~> 1.4"},
     ]
   end
