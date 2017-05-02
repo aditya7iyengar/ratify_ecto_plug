@@ -7,9 +7,9 @@ defmodule Ratify.Ecto.Plug.AuthHandler do
 
   import Plug.Conn
 
-  def handle_unauthenticated(conn, function) do
+  def handle_unauthenticated(conn, transform) do
     conn
-    |> function
+    |> transform.()
     |> halt()
   end
 end
