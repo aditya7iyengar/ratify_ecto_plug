@@ -1,4 +1,4 @@
-defmodule Ratify.Ecto.Plug.Handlers.AuthHandler do
+defmodule Ratify.Ecto.Plug.AuthHandler do
   @moduledoc """
   A default error handler that can be used for failed authentication
   """

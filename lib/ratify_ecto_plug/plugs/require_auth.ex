@@ -1,4 +1,4 @@
-defmodule Ratify.Ecto.Plug.Plugs.RequireAuth do
+defmodule Ratify.Ecto.Plug.RequireAuth do
   def init(params) do
     params = Enum.into(params, %{})
     %{handler: build_handler_tuple(params)}

@@ -1,4 +1,4 @@
-defmodule Ratify.Ecto.Plug.Plugs.SetUser do
+defmodule Ratify.Ecto.Plug.SetUser do
   import Plug.Conn
 
   def init(_params) do
